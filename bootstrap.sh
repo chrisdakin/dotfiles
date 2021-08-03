@@ -1,6 +1,5 @@
 if [[ "$SPIN" = 1 ]]
 then
-  step "spin git config"
   git config --global pull.rebase true
   # Only run nested steps in Spin + shopify/shopify workspaces.
   if [[ "$SPIN_REPO_SOURCE_PATH" = "/src/github.com/shopify/shopify" ]]
