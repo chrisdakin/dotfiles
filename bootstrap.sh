@@ -1,6 +1,7 @@
 if [[ "$SPIN" = 1 ]]
 then
   git config --global pull.rebase true
+  git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset' --abbrev-commit"
   # Only run nested steps in Spin + shopify/shopify workspaces.
   if [[ "$SPIN_REPO_SOURCE_PATH" = "/src/github.com/shopify/shopify" ]]
   then
